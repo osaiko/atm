@@ -1,0 +1,30 @@
+<div style="text-align: center">
+	<h1>Welcome to {{ title }}!</h1>
+</div>
+<div style="text-align: center">
+	<input #box type="password" maxlength="4">
+	<button (click)="login(box.value); box.value = ''">Enter a PIN</button>
+</div>
+<br>
+
+<div *ngIf="show">
+	<div>
+		Balance: <input #bbox type="text" value="{{balance}}" readonly>
+	</div>
+	<br>
+	<div>
+		Deposit: <input #dbox type="text" value="{{deposit}}" readonly>
+	</div>
+	<br>
+	<div>
+		<input #wbox type="text">
+		<button (click)="withdraw(wbox.value); wbox.value = ''">
+			Withdraw cash</button>
+	</div>
+	<br>
+	<div>
+		<input #mdbox type="text">
+		<button (click)="makeDeposit(mdbox.value); mdbox.value = ''">
+			Make a deposit</button>
+	</div>
+</div>

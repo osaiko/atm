@@ -1,0 +1,10 @@
+CREATE SCHEMA `atm`;
+
+CREATE TABLE `atm`.`account` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `pin` INT NOT NULL,
+  `balance` DECIMAL(11,4) NULL DEFAULT 0.0,
+  `deposit` DECIMAL(11,4) NULL DEFAULT 0.0,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+  UNIQUE INDEX `pin_UNIQUE` (`pin` ASC));
